@@ -1,0 +1,9 @@
+target: possion_2d
+n_samps_domain: 1000000
+n_samps_bc: 1000000
+batch_size: 5000
+shape_name: disk
+shape_kwargs:
+    center: [.5, .5]
+    radius: 0.5
+

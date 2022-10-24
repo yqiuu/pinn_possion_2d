@@ -1,0 +1,9 @@
+target: possion_2d
+n_samps_domain: 1000000
+n_samps_bc: 1000000
+batch_size: 5000
+shape_name: triangle
+shape_kwargs:
+    vertices: [[.23, 0.], [1., 1.], [0., .92]]
+    boundary_type: 'unweighted'
+
