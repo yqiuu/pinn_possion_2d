@@ -6,7 +6,7 @@
 
 - 采用以下激活函数：
 
-  $f(x) = xe^{-\frac{x^2}{2e}}$
+  f(x) = x exp(-x^2/(2e))
 
 - 最后一层线性层使用weight normalization。
 
@@ -16,7 +16,7 @@
 
 ## 数据集
 
-本赛题要求在矩形、圆形、三角形和五边形内求解泊松方程。需求的数据为在这些区域内和边界的随机样本。矩形和圆形由``mindelec``自带的方法给出。三角形和五边形由本代码库给出。本项目假设所有求解区域都在$[0, 1] \times [0, 1]$内。对于四种几何形状，训练集在区域内和边界上都随机生成$10^6$个点，测试集在区域内和边界上都随机生成5000个点。
+本赛题要求在矩形、圆形、三角形和五边形内求解泊松方程。需求的数据为在这些区域内和边界的随机样本。矩形和圆形由``mindelec``自带的方法给出。三角形和五边形由本代码库给出。本项目假设所有求解区域都在[0, 1] × [0, 1]内。对于四种几何形状，训练集在区域内和边界上都随机生成10^6个点，测试集在区域内和边界上都随机生成5000个点。
 
 
 # 环境要求
@@ -57,7 +57,7 @@
 
 - Batch size: 5000
 - Epoch: 600
-- Learning rate: 采用[Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120)提出的动态学习率进行训练，该学习率按余弦函数先升后降。本项目选择初始学习率为$2 \times 10^{-5}$，最大学习率为$5 \times 10^{-4}$，最终学习率为$5 \times 10^{-8}$, pct_start=0.15（学习率上升的Epoch/总Epoch）。
+- Learning rate: 采用[Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120)提出的动态学习率进行训练，该学习率按余弦函数先升后降。本项目选择初始学习率为2 × 10^(-5)，最大学习率为5 × 10^(-4)，最终学习率为5 × 10^(-8), pct_start=0.15（学习率上升的Epoch/总Epoch）。
 - Loss function: 由``mindelec``给出的``MTLWeightedLossCell``
 - Optimizer: Adam
 
